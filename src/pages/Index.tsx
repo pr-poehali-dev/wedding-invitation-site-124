@@ -61,7 +61,7 @@ export default function Index() {
           <div className="relative mb-4">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-amber-400/60 text-2xl">✦</div>
             <h1 className="font-serif text-7xl md:text-9xl font-light text-white leading-none tracking-wide">
-              Анна
+              Арина
             </h1>
             <div className="flex items-center justify-center gap-4 my-2">
               <div className="h-px w-16 bg-amber-400/50" />
@@ -69,15 +69,15 @@ export default function Index() {
               <div className="h-px w-16 bg-amber-400/50" />
             </div>
             <h1 className="font-serif text-7xl md:text-9xl font-light text-white leading-none tracking-wide">
-              Михаил
+              Александр
             </h1>
           </div>
 
           <p className="font-sans text-sm tracking-[0.3em] uppercase text-amber-200/70 mt-8">
-            14 июня 2026 · Сочи
+            22 июля 2026 · Кимры
           </p>
 
-          <CountdownTimer targetDate="2026-06-14" />
+          <CountdownTimer targetDate="2026-07-22" />
 
           <a
             href="#rsvp"
@@ -237,7 +237,7 @@ export default function Index() {
             Будете ли вы<br /><em>с нами?</em>
           </h2>
           <p className="font-sans text-xs text-[#9a7a5a] mb-12">
-            Просим подтвердить до 1 мая 2026
+            Просим подтвердить до 1 июля 2026
           </p>
 
           {submitted ? (
@@ -315,7 +315,7 @@ export default function Index() {
       <footer className="py-16 px-6 text-center border-t border-amber-900/30">
         <div className="text-amber-600/30 text-3xl mb-4 font-serif">✦</div>
         <p className="font-serif text-2xl italic text-amber-800/50 font-light">«Любовь никогда не перестаёт»</p>
-        <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-amber-900/40 mt-4">Анна & Михаил · 14.06.2026</p>
+        <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-amber-900/40 mt-4">Арина & Александр · 22.07.2026</p>
       </footer>
     </div>
   );
