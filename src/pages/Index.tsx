@@ -12,18 +12,18 @@ const SUNSET_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c
 // --border:      #e8e2f0   (рамки)
 
 const timeline = [
-  { time: "15:00", icon: "Church", title: "Церемония бракосочетания", desc: "Торжественная регистрация союза" },
-  { time: "16:00", icon: "Camera", title: "Фотосессия", desc: "Прогулка и памятные снимки" },
-  { time: "18:00", icon: "UtensilsCrossed", title: "Банкет", desc: "Праздничный ужин, тосты, танцы" },
-  { time: "23:00", icon: "Music", title: "Вечеринка", desc: "Живая музыка и дискотека" },
+  { time: "14:00", icon: "Church", title: "Церемония бракосочетания", desc: "Торжественная регистрация союза" },
+  { time: "15:30", icon: "Camera", title: "Фотосессия", desc: "Прогулка и памятные снимки" },
+  { time: "17:00", icon: "UtensilsCrossed", title: "Банкет", desc: "Праздничный ужин, тосты, танцы" },
+  { time: "23:00", icon: "Sunset", title: "Конец торжества", desc: "Спасибо, что разделили этот день с нами" },
 ];
 
 const dresscode = [
-  { color: "#C9B8D8", name: "Лаванда" },
-  { color: "#D8CAEB", name: "Сирень" },
-  { color: "#E6DCF2", name: "Нежный" },
-  { color: "#B8A5CC", name: "Пыльный" },
-  { color: "#8C7AAA", name: "Глубокий" },
+  { color: "#B57BCA", name: "Фиолетовый" },
+  { color: "#C8A8DC", name: "Лавандовый" },
+  { color: "#D4B8E0", name: "Сиреневый" },
+  { color: "#E8D5F0", name: "Нежный" },
+  { color: "#7B4F9E", name: "Глубокий" },
 ];
 
 export default function Index() {
@@ -52,7 +52,7 @@ export default function Index() {
           </p>
 
           <div className="relative mb-4">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-white/40 text-xl">✦</div>
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-white/40 text-xl">∞</div>
             <h1 className="font-serif text-7xl md:text-9xl font-light text-white leading-none tracking-wide drop-shadow-sm">
               Арина
             </h1>
@@ -129,7 +129,7 @@ export default function Index() {
               <p className="font-sans text-[10px] text-[#a89eb8] tracking-widest uppercase mt-1">ул. 50 лет ВЛКСМ, 117, Кимры</p>
             </DetailCard>
             <DetailCard icon="Clock" title="Начало">
-              <p className="font-serif text-3xl text-[#3a3040] font-light">15:00</p>
+              <p className="font-serif text-3xl text-[#3a3040] font-light">14:00</p>
               <p className="font-sans text-[10px] text-[#a89eb8] tracking-widest uppercase mt-1">Просим не опаздывать</p>
             </DetailCard>
           </div>
@@ -199,8 +199,6 @@ export default function Index() {
         <div className="grid md:grid-cols-2 gap-5">
           {[
             { icon: "Gift", title: "Подарки", text: "Лучший подарок для нас — ваше присутствие. Если хотите порадовать — конверт будет кстати." },
-            { icon: "Baby", title: "Дети", text: "Мы обожаем детей, но этот вечер — для взрослых. Заранее позаботьтесь о няне." },
-            { icon: "Flower2", title: "Живые цветы", text: "Пожалуйста, без срезанных цветов — у невесты аллергия. Лучше горшечные растения." },
             { icon: "Bell", title: "Тосты", text: "Пожелания от гостей — лучшая часть вечера. Готовьте трогательные слова!" },
           ].map((item) => (
             <div key={item.title} className="border border-[#e8e2f0] p-6 hover:border-[#c4b8d4] transition-colors duration-300 group">
@@ -301,8 +299,8 @@ export default function Index() {
 
       {/* ─── FOOTER ─── */}
       <footer className="py-16 px-6 text-center border-t border-[#e8e2f0]">
-        <div className="text-[#d4cce0] text-2xl mb-4 font-serif">✦</div>
-        <p className="font-serif text-2xl italic text-[#a89eb8] font-light">«Любовь никогда не перестаёт»</p>
+        <div className="text-[#d4cce0] text-2xl mb-4">∞</div>
+        <p className="font-serif text-2xl italic text-[#a89eb8] font-light">«Любовь навсегда»</p>
         <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#c4b8d4] mt-4">Арина & Александр · 22.07.2026</p>
       </footer>
     </div>
