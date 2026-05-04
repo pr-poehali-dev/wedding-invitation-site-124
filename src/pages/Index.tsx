@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const SUNSET_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/3616ecb7-b087-4e03-8fa8-e47a10405869.jpg";
+const SUNSET_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/4313af61-4c32-4530-a167-6b6d1f7f53dd.jpg";
 
 const timeline = [
   { time: "15:00", icon: "Church", title: "Церемония бракосочетания", desc: "Торжественная регистрация союза" },
@@ -11,11 +11,11 @@ const timeline = [
 ];
 
 const dresscode = [
-  { color: "#C9956B", name: "Терракота" },
-  { color: "#E8C9A0", name: "Золотой" },
-  { color: "#8B5E3C", name: "Шоколад" },
-  { color: "#F5E6D3", name: "Жемчуг" },
-  { color: "#6B4C3B", name: "Тёмный орех" },
+  { color: "#B57BCA", name: "Фиолетовый" },
+  { color: "#C8A8DC", name: "Лавандовый" },
+  { color: "#D4B8E0", name: "Сиреневый" },
+  { color: "#E8D5F0", name: "Нежный" },
+  { color: "#7B4F9E", name: "Глубокий" },
 ];
 
 export default function Index() {
@@ -181,7 +181,7 @@ export default function Index() {
             Палитра вечера
           </h2>
           <p className="font-sans text-xs text-[#9a7a5a] mb-12 max-w-sm mx-auto">
-            Просим придерживаться тёплой цветовой гаммы — оттенков заката и земли
+            Просим придерживаться нежной цветовой гаммы — оттенков лаванды, сирени и фиолетового
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             {dresscode.map((item) => (
