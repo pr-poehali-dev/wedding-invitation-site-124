@@ -13,32 +13,15 @@ export default function Thanks() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white font-sans text-[#3a3040] flex flex-col items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen font-sans text-[#3a3040] flex flex-col items-center justify-center relative overflow-hidden">
 
-      {/* Фоновое фото — очень прозрачное */}
+      {/* Фоновое фото */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.06]"
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${FLOWER_BG})` }}
       />
-
-      {/* Декоративные лепестки */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(10)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-[#e8d5f0] animate-float"
-            style={{
-              width: `${6 + (i % 4) * 4}px`,
-              height: `${6 + (i % 4) * 4}px`,
-              left: `${8 + i * 9}%`,
-              top: `${15 + (i % 5) * 14}%`,
-              opacity: 0.4,
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: `${4 + (i % 3)}s`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Белый оверлей — светло и нежно */}
+      <div className="fixed inset-0 bg-white/78" />
 
       <div
         className="relative z-10 text-center px-6 max-w-xl mx-auto transition-all duration-1000"
@@ -73,7 +56,7 @@ export default function Thanks() {
         </p>
 
         {/* Место для гифки */}
-        <div className="mb-12 border border-[#e8e2f0] bg-[#f9f7fc] rounded-sm overflow-hidden">
+        <div className="mb-12 border border-[#e8e2f0] bg-white/70 backdrop-blur-sm rounded-sm overflow-hidden">
           <div className="aspect-[4/3] flex flex-col items-center justify-center gap-2">
             <span className="text-3xl">🎉</span>
             <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-[#c4b8d4]">здесь будет ваша гифка</p>

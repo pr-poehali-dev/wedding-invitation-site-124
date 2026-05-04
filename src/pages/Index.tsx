@@ -39,15 +39,19 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf8fd] font-sans text-[#3a3040]">
+    <div className="min-h-screen font-sans text-[#3a3040] relative">
+
+      {/* Единый фон на весь сайт */}
+      <div
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${SUNSET_BG})` }}
+      />
+      {/* Белый оверлей поверх — делает фон нежным, не кислотным */}
+      <div className="fixed inset-0 bg-white/75" />
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${SUNSET_BG})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-[#faf8fd]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
 
         <div className="relative z-10 text-center px-6 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
           <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#a89eb8] mb-8">
@@ -84,7 +88,7 @@ export default function Index() {
       </section>
 
       {/* ─── НАША ИСТОРИЯ ─── */}
-      <section className="py-24 px-6 max-w-3xl mx-auto text-center bg-[#faf8fd]">
+      <section className="py-24 px-6 max-w-3xl mx-auto text-center relative">
         <SectionLabel>Наша история</SectionLabel>
         <h2 className="font-serif text-5xl md:text-6xl font-light text-[#3a3040] mb-8 leading-tight">
           Путь к этому<br /><em>прекрасному дню</em>
@@ -112,7 +116,7 @@ export default function Index() {
       </section>
 
       {/* ─── ДАТА И МЕСТО ─── */}
-      <section className="py-20 px-6 bg-[#f9f7fc] relative overflow-hidden">
+      <section className="py-20 px-6 bg-white/40 relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4cce0] to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4cce0] to-transparent" />
         <div className="max-w-4xl mx-auto">
@@ -135,7 +139,7 @@ export default function Index() {
       </section>
 
       {/* ─── ПРОГРАММА ─── */}
-      <section className="py-24 px-6 max-w-2xl mx-auto">
+      <section className="py-24 px-6 max-w-2xl mx-auto relative">
         <SectionLabel>Программа вечера</SectionLabel>
         <h2 className="font-serif text-4xl md:text-5xl font-light text-[#3a3040] mb-14 text-center leading-tight">
           Как пройдёт<br /><em>этот день</em>
@@ -160,7 +164,7 @@ export default function Index() {
       </section>
 
       {/* ─── ДРЕСС-КОД ─── */}
-      <section className="py-20 px-6 bg-[#f9f7fc] relative overflow-hidden">
+      <section className="py-20 px-6 bg-white/40 relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4cce0] to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4cce0] to-transparent" />
         <div className="max-w-2xl mx-auto text-center">
@@ -189,7 +193,7 @@ export default function Index() {
       </section>
 
       {/* ─── ВАЖНЫЕ ПОЖЕЛАНИЯ ─── */}
-      <section className="py-24 px-6 max-w-3xl mx-auto">
+      <section className="py-24 px-6 max-w-3xl mx-auto relative">
         <SectionLabel>Нам важно</SectionLabel>
         <h2 className="font-serif text-4xl md:text-5xl font-light text-[#3a3040] mb-12 text-center leading-tight">
           Несколько<br /><em>пожеланий</em>
@@ -199,7 +203,7 @@ export default function Index() {
             { icon: "Gift", title: "Подарки", text: "Лучший подарок для нас — ваше присутствие. Если хотите порадовать — конверт будет кстати." },
             { icon: "Bell", title: "Тосты", text: "Пожелания от гостей — лучшая часть вечера. Готовьте трогательные слова!" },
           ].map((item) => (
-            <div key={item.title} className="border border-[#e8e2f0] p-6 hover:border-[#c4b8d4] transition-colors duration-300 group">
+            <div key={item.title} className="border border-[#e8e2f0] bg-white/70 backdrop-blur-sm p-6 hover:border-[#c4b8d4] transition-colors duration-300 group">
               <div className="flex items-start gap-4">
                 <Icon name={item.icon} size={15} className="text-[#9b85b0] mt-0.5 shrink-0" />
                 <div>
@@ -213,7 +217,7 @@ export default function Index() {
       </section>
 
       {/* ─── RSVP ─── */}
-      <section id="rsvp" className="py-24 px-6 bg-[#f9f7fc] relative overflow-hidden">
+      <section id="rsvp" className="py-24 px-6 bg-white/40 relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4cce0] to-transparent" />
         <div className="max-w-xl mx-auto text-center">
           <SectionLabel>Ваш ответ</SectionLabel>
@@ -296,7 +300,7 @@ export default function Index() {
       </section>
 
       {/* ─── FOOTER ─── */}
-      <footer className="py-16 px-6 text-center border-t border-[#e8e2f0]">
+      <footer className="py-16 px-6 text-center border-t border-[#e8e2f0] relative bg-white/40">
         <div className="text-[#d4cce0] text-2xl mb-4">∞</div>
         <p className="font-serif text-2xl italic text-[#a89eb8] font-light">«Любовь навсегда»</p>
         <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#c4b8d4] mt-4">Арина & Александр · 22.07.2026</p>
@@ -317,7 +321,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 function DetailCard({ icon, title, children }: { icon: string; title: string; children: React.ReactNode }) {
   return (
-    <div className="text-center border border-[#e8e2f0] bg-white p-8 hover:border-[#c4b8d4] transition-colors duration-300">
+    <div className="text-center border border-[#e8e2f0] bg-white/70 backdrop-blur-sm p-8 hover:border-[#c4b8d4] transition-colors duration-300">
       <Icon name={icon} size={18} className="text-[#9b85b0] mx-auto mb-4" />
       <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] mb-4">{title}</p>
       {children}
