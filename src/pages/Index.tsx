@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const SUNSET_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/4313af61-4c32-4530-a167-6b6d1f7f53dd.jpg";
@@ -27,12 +28,14 @@ const dresscode = [
 ];
 
 export default function Index() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ name: "", guests: "1", attendance: "yes", wishes: "" });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    navigate("/thanks");
   };
 
   return (
