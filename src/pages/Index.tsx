@@ -2,16 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
-const SUNSET_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/4313af61-4c32-4530-a167-6b6d1f7f53dd.jpg";
-const SILK_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/bucket/8dc7aacf-9ddc-42ff-ae7d-7c756f17e529.jpg";
-
-// Палитра: белый фон, пыльно-лиловые акценты, тёмно-серый текст
-// --text-dark:   #3a3040   (заголовки)
-// --text-mid:    #7c7088   (подписи)
-// --text-light:  #a89eb8   (мелкий текст)
-// --accent:      #9b85b0   (иконки, линии)
-// --bg-soft:     #f9f7fc   (чередующиеся секции)
-// --border:      #e8e2f0   (рамки)
+const FLOWER_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/ad2f5a52-fe3f-43a6-ac84-779bd32753d1.jpg";
+const SILK_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/7e67cb85-cbbb-474e-bee6-af0be850bbc3.jpg";
 
 const timeline = [
   { time: "14:00", icon: "Church", title: "Церемония бракосочетания", desc: "Торжественная регистрация союза" },
@@ -40,7 +32,7 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen font-sans text-[#3a3040] relative">
+    <div className="min-h-screen font-sans text-[#1a1a1a] relative">
 
       {/* Фон для всего сайта — шёлковые волны */}
       <div
@@ -53,31 +45,31 @@ export default function Index() {
         {/* Цветы только в герое */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${SUNSET_BG})` }}
+          style={{ backgroundImage: `url(${FLOWER_BG})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-white/60" />
 
         <div className="relative z-10 text-center px-6 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
-          <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#a89eb8] mb-8">
+          <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-black/50 mb-8">
             приглашение на свадьбу
           </p>
 
           <div className="relative mb-4">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-[#c4b8d4] text-xl">∞</div>
-            <h1 className="font-serif text-7xl md:text-9xl font-light text-[#3a3040] leading-none tracking-wide">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-black/30 text-xl">∞</div>
+            <h1 className="font-serif text-7xl md:text-9xl font-light text-black leading-none tracking-wide">
               Арина
             </h1>
             <div className="flex items-center justify-center gap-4 my-3">
-              <div className="h-px w-16 bg-[#d4cce0]" />
-              <span className="font-serif italic text-[#9b85b0] text-2xl">&</span>
-              <div className="h-px w-16 bg-[#d4cce0]" />
+              <div className="h-px w-16 bg-black/20" />
+              <span className="font-serif italic text-black/40 text-2xl">&</span>
+              <div className="h-px w-16 bg-black/20" />
             </div>
-            <h1 className="font-serif text-7xl md:text-9xl font-light text-[#3a3040] leading-none tracking-wide">
+            <h1 className="font-serif text-7xl md:text-9xl font-light text-black leading-none tracking-wide">
               Александр
             </h1>
           </div>
 
-          <p className="font-sans text-[11px] tracking-[0.35em] uppercase text-[#7c7088] mt-8">
+          <p className="font-sans text-[11px] tracking-[0.35em] uppercase text-black/50 mt-8">
             22 июля 2026 · Кимры
           </p>
 
@@ -87,17 +79,17 @@ export default function Index() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <Icon name="ChevronDown" size={20} className="text-[#c4b8d4]" />
+          <Icon name="ChevronDown" size={20} className="text-black/30" />
         </div>
       </section>
 
       {/* ─── НАША ИСТОРИЯ ─── */}
       <section className="py-24 px-6 max-w-3xl mx-auto text-center relative">
         <SectionLabel>Наша история</SectionLabel>
-        <h2 className="font-serif text-5xl md:text-6xl font-light text-[#3a3040] mb-8 leading-tight">
+        <h2 className="font-serif text-5xl md:text-6xl font-light text-black mb-8 leading-tight">
           Путь к этому<br /><em>прекрасному дню</em>
         </h2>
-        <p className="font-sans text-sm leading-relaxed text-[#7c7088] font-light max-w-xl mx-auto">
+        <p className="font-sans text-sm leading-relaxed text-black/60 font-light max-w-xl mx-auto">
           Мы встретились однажды вечером, когда небо было именно таким — тёплым, золотым,
           бесконечным. С тех пор каждый закат мы встречаем вместе. И теперь хотим разделить
           самый главный момент нашей жизни с вами — людьми, которые дороги нам больше всего.
@@ -106,8 +98,8 @@ export default function Index() {
         <div className="mt-14 relative">
           <div className="border border-[#e8e2f0] p-1">
             <div className="bg-[#f9f7fc] aspect-[4/3] flex flex-col items-center justify-center gap-3 relative overflow-hidden">
-              <Icon name="ImagePlus" size={28} className="text-[#c4b8d4]" />
-              <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-[#c4b8d4]">
+              <Icon name="ImagePlus" size={28} className="text-black/30" />
+              <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-black/30">
                 Ваше совместное фото
               </p>
               <p className="font-sans text-[9px] text-[#d4cce0]">
@@ -127,16 +119,16 @@ export default function Index() {
           <SectionLabel>Детали торжества</SectionLabel>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <DetailCard icon="Calendar" title="Дата">
-              <p className="font-serif text-3xl text-[#3a3040] font-light">22 июля</p>
-              <p className="font-sans text-[10px] text-[#a89eb8] tracking-widest uppercase mt-1">2026 года</p>
+              <p className="font-serif text-3xl text-black font-light">22 июля</p>
+              <p className="font-sans text-[10px] text-black/40 tracking-widest uppercase mt-1">2026 года</p>
             </DetailCard>
             <DetailCard icon="MapPin" title="Место">
-              <p className="font-serif text-2xl text-[#3a3040] font-light">Усадьба</p>
-              <p className="font-sans text-[10px] text-[#a89eb8] tracking-widest uppercase mt-1">ул. 50 лет ВЛКСМ, 117, Кимры</p>
+              <p className="font-serif text-2xl text-black font-light">Усадьба</p>
+              <p className="font-sans text-[10px] text-black/40 tracking-widest uppercase mt-1">ул. 50 лет ВЛКСМ, 117, Кимры</p>
             </DetailCard>
             <DetailCard icon="Clock" title="Начало">
-              <p className="font-serif text-3xl text-[#3a3040] font-light">14:00</p>
-              <p className="font-sans text-[10px] text-[#a89eb8] tracking-widest uppercase mt-1">Просим не опаздывать</p>
+              <p className="font-serif text-3xl text-black font-light">14:00</p>
+              <p className="font-sans text-[10px] text-black/40 tracking-widest uppercase mt-1">Просим не опаздывать</p>
             </DetailCard>
           </div>
         </div>
@@ -145,7 +137,7 @@ export default function Index() {
       {/* ─── ПРОГРАММА ─── */}
       <section className="py-24 px-6 max-w-2xl mx-auto relative">
         <SectionLabel>Программа вечера</SectionLabel>
-        <h2 className="font-serif text-4xl md:text-5xl font-light text-[#3a3040] mb-14 text-center leading-tight">
+        <h2 className="font-serif text-4xl md:text-5xl font-light text-black mb-14 text-center leading-tight">
           Как пройдёт<br /><em>этот день</em>
         </h2>
         <div className="relative">
@@ -154,12 +146,12 @@ export default function Index() {
             {timeline.map((item, i) => (
               <div key={i} className="flex gap-6 items-start group">
                 <div className="w-14 h-14 shrink-0 border border-[#e8e2f0] flex items-center justify-center bg-white group-hover:border-[#c4b8d4] transition-colors duration-300 relative z-10">
-                  <Icon name={item.icon} size={18} className="text-[#9b85b0]" />
+                  <Icon name={item.icon} size={18} className="text-black/50" />
                 </div>
                 <div className="pt-2">
-                  <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] mb-1">{item.time}</p>
-                  <p className="font-serif text-xl text-[#3a3040] font-light">{item.title}</p>
-                  <p className="font-sans text-xs text-[#7c7088] mt-1">{item.desc}</p>
+                  <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-black/40 mb-1">{item.time}</p>
+                  <p className="font-serif text-xl text-black font-light">{item.title}</p>
+                  <p className="font-sans text-xs text-black/60 mt-1">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -173,10 +165,10 @@ export default function Index() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4cce0] to-transparent" />
         <div className="max-w-2xl mx-auto text-center">
           <SectionLabel>Дресс-код</SectionLabel>
-          <h2 className="font-serif text-4xl md:text-5xl font-light text-[#3a3040] mb-4 leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl font-light text-black mb-4 leading-tight">
             Палитра вечера
           </h2>
-          <p className="font-sans text-xs text-[#7c7088] mb-12 max-w-sm mx-auto">
+          <p className="font-sans text-xs text-black/60 mb-12 max-w-sm mx-auto">
             Просим придерживаться нежной гаммы — оттенков лаванды, сирени и пыльного лилового
           </p>
           <div className="flex justify-center gap-6 flex-wrap">
@@ -186,11 +178,11 @@ export default function Index() {
                   className="w-12 h-12 rounded-full border border-white shadow-sm group-hover:scale-110 transition-transform duration-300"
                   style={{ backgroundColor: item.color }}
                 />
-                <p className="font-sans text-[9px] tracking-widest uppercase text-[#a89eb8]">{item.name}</p>
+                <p className="font-sans text-[9px] tracking-widest uppercase text-black/40">{item.name}</p>
               </div>
             ))}
           </div>
-          <p className="font-sans text-[10px] text-[#c4b8d4] mt-8 tracking-wider uppercase">
+          <p className="font-sans text-[10px] text-black/30 mt-8 tracking-wider uppercase">
             Белый и чёрный цвет — только для жениха и невесты
           </p>
         </div>
@@ -199,7 +191,7 @@ export default function Index() {
       {/* ─── ВАЖНЫЕ ПОЖЕЛАНИЯ ─── */}
       <section className="py-24 px-6 max-w-3xl mx-auto relative">
         <SectionLabel>Нам важно</SectionLabel>
-        <h2 className="font-serif text-4xl md:text-5xl font-light text-[#3a3040] mb-12 text-center leading-tight">
+        <h2 className="font-serif text-4xl md:text-5xl font-light text-black mb-12 text-center leading-tight">
           Несколько<br /><em>пожеланий</em>
         </h2>
         <div className="grid md:grid-cols-2 gap-5">
@@ -209,10 +201,10 @@ export default function Index() {
           ].map((item) => (
             <div key={item.title} className="border border-[#e8e2f0] bg-white/70 backdrop-blur-sm p-6 hover:border-[#c4b8d4] transition-colors duration-300 group">
               <div className="flex items-start gap-4">
-                <Icon name={item.icon} size={15} className="text-[#9b85b0] mt-0.5 shrink-0" />
+                <Icon name={item.icon} size={15} className="text-black/50 mt-0.5 shrink-0" />
                 <div>
-                  <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-[#a89eb8] mb-2">{item.title}</p>
-                  <p className="font-sans text-xs text-[#7c7088] leading-relaxed">{item.text}</p>
+                  <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-black/40 mb-2">{item.title}</p>
+                  <p className="font-sans text-xs text-black/60 leading-relaxed">{item.text}</p>
                 </div>
               </div>
             </div>
@@ -225,34 +217,34 @@ export default function Index() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4cce0] to-transparent" />
         <div className="max-w-xl mx-auto text-center">
           <SectionLabel>Ваш ответ</SectionLabel>
-          <h2 className="font-serif text-4xl md:text-5xl font-light text-[#3a3040] mb-3 leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl font-light text-black mb-3 leading-tight">
             Будете ли вы<br /><em>с нами?</em>
           </h2>
-          <p className="font-sans text-xs text-[#7c7088] mb-12">
+          <p className="font-sans text-xs text-black/60 mb-12">
             Просим подтвердить до 1 июля 2026
           </p>
 
           {submitted ? (
             <div className="border border-[#e8e2f0] bg-white p-12 text-center">
-              <div className="text-3xl mb-4 text-[#c4b8d4]">✦</div>
-              <p className="font-serif text-2xl text-[#3a3040] font-light">Спасибо!</p>
-              <p className="font-sans text-xs text-[#7c7088] mt-3">Мы получили ваш ответ и очень ждём вас</p>
+              <div className="text-3xl mb-4 text-black/30">✦</div>
+              <p className="font-serif text-2xl text-black font-light">Спасибо!</p>
+              <p className="font-sans text-xs text-black/60 mt-3">Мы получили ваш ответ и очень ждём вас</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5 text-left">
               <div>
-                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] block mb-2">Ваше имя</label>
+                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-black/40 block mb-2">Ваше имя</label>
                 <input
                   type="text"
                   value={form.name}
                   onChange={e => setForm({ ...form, name: e.target.value })}
                   required
                   placeholder="Иван Иванов"
-                  className="w-full bg-white border border-[#e8e2f0] px-4 py-3 font-sans text-sm text-[#3a3040] placeholder-[#d4cce0] focus:outline-none focus:border-[#9b85b0] transition-colors"
+                  className="w-full bg-white border border-[#e8e2f0] px-4 py-3 font-sans text-sm text-black placeholder-[#d4cce0] focus:outline-none focus:border-[#9b85b0] transition-colors"
                 />
               </div>
               <div>
-                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] block mb-2">Присутствие</label>
+                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-black/40 block mb-2">Присутствие</label>
                 <div className="grid grid-cols-2 gap-3">
                   {[{ val: "yes", label: "Да, буду!" }, { val: "no", label: "К сожалению, нет" }].map(opt => (
                     <button
@@ -262,7 +254,7 @@ export default function Index() {
                       className={`py-3 px-4 font-sans text-[10px] tracking-widest uppercase border transition-all duration-300 ${
                         form.attendance === opt.val
                           ? "border-[#9b85b0] bg-[#f3eef9] text-[#6b5485]"
-                          : "border-[#e8e2f0] text-[#a89eb8] bg-white hover:border-[#c4b8d4]"
+                          : "border-[#e8e2f0] text-black/40 bg-white hover:border-[#c4b8d4]"
                       }`}
                     >
                       {opt.label}
@@ -271,11 +263,11 @@ export default function Index() {
                 </div>
               </div>
               <div>
-                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] block mb-2">Количество гостей</label>
+                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-black/40 block mb-2">Количество гостей</label>
                 <select
                   value={form.guests}
                   onChange={e => setForm({ ...form, guests: e.target.value })}
-                  className="w-full bg-white border border-[#e8e2f0] px-4 py-3 font-sans text-sm text-[#3a3040] focus:outline-none focus:border-[#9b85b0] transition-colors"
+                  className="w-full bg-white border border-[#e8e2f0] px-4 py-3 font-sans text-sm text-black focus:outline-none focus:border-[#9b85b0] transition-colors"
                 >
                   {["1", "2", "3", "4"].map(n => (
                     <option key={n} value={n}>{n} {n === "1" ? "гость" : "гостя"}</option>
@@ -283,13 +275,13 @@ export default function Index() {
                 </select>
               </div>
               <div>
-                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] block mb-2">Дополнительная информация для нас</label>
+                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-black/40 block mb-2">Дополнительная информация для нас</label>
                 <textarea
                   value={form.wishes}
                   onChange={e => setForm({ ...form, wishes: e.target.value })}
                   rows={3}
                   placeholder="Напишите что-нибудь..."
-                  className="w-full bg-white border border-[#e8e2f0] px-4 py-3 font-sans text-sm text-[#3a3040] placeholder-[#d4cce0] focus:outline-none focus:border-[#9b85b0] transition-colors resize-none"
+                  className="w-full bg-white border border-[#e8e2f0] px-4 py-3 font-sans text-sm text-black placeholder-[#d4cce0] focus:outline-none focus:border-[#9b85b0] transition-colors resize-none"
                 />
               </div>
               <button
@@ -306,8 +298,8 @@ export default function Index() {
       {/* ─── FOOTER ─── */}
       <footer className="py-16 px-6 text-center border-t border-[#e8e2f0] relative bg-white/40">
         <div className="text-[#d4cce0] text-2xl mb-4">∞</div>
-        <p className="font-serif text-2xl italic text-[#a89eb8] font-light">«Любовь навсегда»</p>
-        <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#c4b8d4] mt-4">Арина & Александр · 22.07.2026</p>
+        <p className="font-serif text-2xl italic text-black/40 font-light">«Любовь навсегда»</p>
+        <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-black/30 mt-4">Арина & Александр · 22.07.2026</p>
       </footer>
     </div>
   );
@@ -317,7 +309,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center justify-center gap-4 mb-6">
       <div className="h-px w-8 bg-[#d4cce0]" />
-      <p className="font-sans text-[10px] tracking-[0.4em] uppercase text-[#a89eb8]">{children}</p>
+      <p className="font-sans text-[10px] tracking-[0.4em] uppercase text-black/40">{children}</p>
       <div className="h-px w-8 bg-[#d4cce0]" />
     </div>
   );
@@ -326,8 +318,8 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function DetailCard({ icon, title, children }: { icon: string; title: string; children: React.ReactNode }) {
   return (
     <div className="text-center border border-[#e8e2f0] bg-white/70 backdrop-blur-sm p-8 hover:border-[#c4b8d4] transition-colors duration-300">
-      <Icon name={icon} size={18} className="text-[#9b85b0] mx-auto mb-4" />
-      <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] mb-4">{title}</p>
+      <Icon name={icon} size={18} className="text-black/50 mx-auto mb-4" />
+      <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-black/40 mb-4">{title}</p>
       {children}
     </div>
   );
@@ -350,8 +342,8 @@ function CountdownTimer({ targetDate }: { targetDate: string }) {
         { val: minutes, label: "минут" },
       ].map(({ val, label }) => (
         <div key={label} className="text-center">
-          <p className="font-serif text-4xl font-light text-[#3a3040]">{String(val).padStart(2, "0")}</p>
-          <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-[#a89eb8] mt-1">{label}</p>
+          <p className="font-serif text-4xl font-light text-black">{String(val).padStart(2, "0")}</p>
+          <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-black/40 mt-1">{label}</p>
         </div>
       ))}
     </div>
