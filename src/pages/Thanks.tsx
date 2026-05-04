@@ -17,7 +17,7 @@ export default function Thanks() {
 
       {/* Фоновое фото — очень прозрачное */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.06]"
         style={{ backgroundImage: `url(${FLOWER_BG})` }}
       />
 

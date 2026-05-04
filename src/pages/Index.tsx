@@ -47,29 +47,29 @@ export default function Index() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${SUNSET_BG})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/20 to-white" />
 
         <div className="relative z-10 text-center px-6 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
-          <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-white/70 mb-8">
+          <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#a89eb8] mb-8">
             приглашение на свадьбу
           </p>
 
           <div className="relative mb-4">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-white/40 text-xl">∞</div>
-            <h1 className="font-serif text-7xl md:text-9xl font-light text-white leading-none tracking-wide drop-shadow-sm">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-[#c4b8d4] text-xl">∞</div>
+            <h1 className="font-serif text-7xl md:text-9xl font-light text-[#3a3040] leading-none tracking-wide">
               Арина
             </h1>
             <div className="flex items-center justify-center gap-4 my-3">
-              <div className="h-px w-16 bg-white/30" />
-              <span className="font-serif italic text-white/60 text-2xl">&</span>
-              <div className="h-px w-16 bg-white/30" />
+              <div className="h-px w-16 bg-[#d4cce0]" />
+              <span className="font-serif italic text-[#9b85b0] text-2xl">&</span>
+              <div className="h-px w-16 bg-[#d4cce0]" />
             </div>
-            <h1 className="font-serif text-7xl md:text-9xl font-light text-white leading-none tracking-wide drop-shadow-sm">
+            <h1 className="font-serif text-7xl md:text-9xl font-light text-[#3a3040] leading-none tracking-wide">
               Александр
             </h1>
           </div>
 
-          <p className="font-sans text-[11px] tracking-[0.35em] uppercase text-white/60 mt-8">
+          <p className="font-sans text-[11px] tracking-[0.35em] uppercase text-[#7c7088] mt-8">
             22 июля 2026 · Кимры
           </p>
 
@@ -79,7 +79,7 @@ export default function Index() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <Icon name="ChevronDown" size={20} className="text-white/40" />
+          <Icon name="ChevronDown" size={20} className="text-[#c4b8d4]" />
         </div>
       </section>
 
@@ -342,8 +342,8 @@ function CountdownTimer({ targetDate }: { targetDate: string }) {
         { val: minutes, label: "минут" },
       ].map(({ val, label }) => (
         <div key={label} className="text-center">
-          <p className="font-serif text-4xl font-light text-white/90">{String(val).padStart(2, "0")}</p>
-          <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-white/40 mt-1">{label}</p>
+          <p className="font-serif text-4xl font-light text-[#3a3040]">{String(val).padStart(2, "0")}</p>
+          <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-[#a89eb8] mt-1">{label}</p>
         </div>
       ))}
     </div>
