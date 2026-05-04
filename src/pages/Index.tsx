@@ -131,12 +131,12 @@ export default function Index() {
           <SectionLabel>Детали торжества</SectionLabel>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <DetailCard icon="Calendar" title="Дата">
-              <p className="font-serif text-3xl text-amber-200 font-light">14 июня</p>
+              <p className="font-serif text-3xl text-amber-200 font-light">22 июля</p>
               <p className="font-sans text-xs text-amber-700 tracking-widest uppercase mt-1">2026 года</p>
             </DetailCard>
             <DetailCard icon="MapPin" title="Место">
-              <p className="font-serif text-2xl text-amber-200 font-light">Гранд Отель</p>
-              <p className="font-sans text-xs text-amber-700 tracking-widest uppercase mt-1">Сочи, ул. Приморская, 1</p>
+              <p className="font-serif text-2xl text-amber-200 font-light">Усадьба</p>
+              <p className="font-sans text-xs text-amber-700 tracking-widest uppercase mt-1">ул. 50 лет ВЛКСМ, 117, Кимры</p>
             </DetailCard>
             <DetailCard icon="Clock" title="Начало">
               <p className="font-serif text-3xl text-amber-200 font-light">15:00</p>
