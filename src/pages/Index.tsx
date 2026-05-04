@@ -72,12 +72,7 @@ export default function Index() {
 
           <CountdownTimer targetDate="2026-07-22" />
 
-          <a
-            href="#rsvp"
-            className="inline-block mt-10 px-10 py-3 border border-white/40 text-white/80 font-sans text-[10px] tracking-[0.3em] uppercase hover:bg-white/10 transition-all duration-500"
-          >
-            Подтвердить присутствие
-          </a>
+
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
@@ -277,12 +272,12 @@ export default function Index() {
                 </select>
               </div>
               <div>
-                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] block mb-2">Пожелания молодожёнам</label>
+                <label className="font-sans text-[10px] tracking-[0.3em] uppercase text-[#a89eb8] block mb-2">Дополнительная информация для нас</label>
                 <textarea
                   value={form.wishes}
                   onChange={e => setForm({ ...form, wishes: e.target.value })}
                   rows={3}
-                  placeholder="Напишите что-нибудь тёплое..."
+                  placeholder="Напишите что-нибудь..."
                   className="w-full bg-white border border-[#e8e2f0] px-4 py-3 font-sans text-sm text-[#3a3040] placeholder-[#d4cce0] focus:outline-none focus:border-[#9b85b0] transition-colors resize-none"
                 />
               </div>
