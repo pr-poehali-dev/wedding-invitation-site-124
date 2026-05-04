@@ -39,7 +39,7 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-[#3a3040]">
+    <div className="min-h-screen bg-[#faf8fd] font-sans text-[#3a3040]">
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -47,7 +47,7 @@ export default function Index() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${SUNSET_BG})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/20 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-[#faf8fd]" />
 
         <div className="relative z-10 text-center px-6 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
           <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#a89eb8] mb-8">
@@ -84,7 +84,7 @@ export default function Index() {
       </section>
 
       {/* ─── НАША ИСТОРИЯ ─── */}
-      <section className="py-24 px-6 max-w-3xl mx-auto text-center">
+      <section className="py-24 px-6 max-w-3xl mx-auto text-center bg-[#faf8fd]">
         <SectionLabel>Наша история</SectionLabel>
         <h2 className="font-serif text-5xl md:text-6xl font-light text-[#3a3040] mb-8 leading-tight">
           Путь к этому<br /><em>прекрасному дню</em>
