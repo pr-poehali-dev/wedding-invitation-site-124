@@ -84,7 +84,7 @@ export default function Index() {
       </section>
 
       {/* ─── НАША ИСТОРИЯ ─── */}
-      <section className="py-24 px-6 max-w-3xl mx-auto text-center relative">
+      <section className="py-24 px-6 max-w-3xl mx-auto text-center relative bg-white/80 backdrop-blur-sm">
         <SectionLabel>Наша история</SectionLabel>
         <h2 className="font-serif text-5xl md:text-6xl font-light text-black mb-8 leading-tight">
           Путь к этому<br /><em>прекрасному дню</em>
@@ -135,7 +135,7 @@ export default function Index() {
       </section>
 
       {/* ─── ПРОГРАММА ─── */}
-      <section className="py-24 px-6 max-w-2xl mx-auto relative">
+      <section className="py-24 px-6 max-w-2xl mx-auto relative bg-white/80 backdrop-blur-sm">
         <SectionLabel>Программа вечера</SectionLabel>
         <h2 className="font-serif text-4xl md:text-5xl font-light text-black mb-14 text-center leading-tight">
           Как пройдёт<br /><em>этот день</em>
@@ -189,7 +189,7 @@ export default function Index() {
       </section>
 
       {/* ─── ВАЖНЫЕ ПОЖЕЛАНИЯ ─── */}
-      <section className="py-24 px-6 max-w-3xl mx-auto relative">
+      <section className="py-24 px-6 max-w-3xl mx-auto relative bg-white/80 backdrop-blur-sm">
         <SectionLabel>Нам важно</SectionLabel>
         <h2 className="font-serif text-4xl md:text-5xl font-light text-black mb-12 text-center leading-tight">
           Несколько<br /><em>пожеланий</em>

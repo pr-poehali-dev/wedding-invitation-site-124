@@ -37,7 +37,7 @@ export default function Thanks() {
         style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(30px)" }}
       >
         {/* Символ бесконечности */}
-        <div className="text-black/20 text-4xl mb-8 select-none">∞</div>
+        <div className="text-black text-4xl mb-8 select-none">∞</div>
 
         {/* Заголовок */}
         <h1 className="font-serif text-5xl md:text-6xl font-light text-black leading-tight mb-6">
@@ -52,20 +52,20 @@ export default function Thanks() {
         </div>
 
         {/* Романтичный текст */}
-        <p className="font-serif text-xl text-black/60 font-light leading-relaxed mb-3">
+        <p className="font-serif text-xl text-black font-light leading-relaxed mb-3">
           Мы с нетерпением ждём этого дня —
         </p>
-        <p className="font-serif text-xl italic text-black/50 font-light leading-relaxed mb-10">
+        <p className="font-serif text-xl italic text-black font-light leading-relaxed mb-10">
           когда все самые близкие люди окажутся рядом, и начнётся что-то по-настоящему волшебное.
         </p>
 
         {/* Дата */}
-        <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-black/40 mb-10">
+        <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-black mb-10">
           22 июля 2026 · Кимры
         </p>
 
         {/* Гифка */}
-        <div ref={gifRef} className="mb-10 overflow-hidden rounded-sm">
+        <div ref={gifRef} className="mb-10 overflow-hidden rounded-none bg-transparent">
           <div
             className="tenor-gif-embed"
             data-postid="10674288337814969177"
@@ -78,13 +78,13 @@ export default function Thanks() {
         {/* Кнопка назад */}
         <button
           onClick={() => navigate("/")}
-          className="font-sans text-[10px] tracking-[0.35em] uppercase text-black/40 hover:text-black/70 transition-colors duration-300 border-b border-black/15 pb-0.5"
+          className="font-sans text-[10px] tracking-[0.35em] uppercase text-black hover:text-black/70 transition-colors duration-300 border-b border-black/15 pb-0.5"
         >
           Вернуться на главную
         </button>
 
         {/* Подпись */}
-        <p className="font-serif text-sm italic text-black/30 mt-10">
+        <p className="font-serif text-sm italic text-black mt-10">
           Арина & Александр
         </p>
       </div>
