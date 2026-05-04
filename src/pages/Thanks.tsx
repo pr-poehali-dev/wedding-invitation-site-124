@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const FLOWER_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/4313af61-4c32-4530-a167-6b6d1f7f53dd.jpg";
+const SILK_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/bucket/8dc7aacf-9ddc-42ff-ae7d-7c756f17e529.jpg";
 
 export default function Thanks() {
   const navigate = useNavigate();
@@ -15,13 +15,11 @@ export default function Thanks() {
   return (
     <div className="min-h-screen font-sans text-[#3a3040] flex flex-col items-center justify-center relative overflow-hidden">
 
-      {/* Фоновое фото */}
+      {/* Шёлковый фон */}
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${FLOWER_BG})` }}
+        style={{ backgroundImage: `url(${SILK_BG})` }}
       />
-      {/* Белый оверлей — светло и нежно */}
-      <div className="fixed inset-0 bg-white/78" />
 
       <div
         className="relative z-10 text-center px-6 max-w-xl mx-auto transition-all duration-1000"

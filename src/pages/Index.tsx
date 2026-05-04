@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const SUNSET_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/files/4313af61-4c32-4530-a167-6b6d1f7f53dd.jpg";
+const SILK_BG = "https://cdn.poehali.dev/projects/0b80e863-c8b8-4410-9c81-4f8c6721ef95/bucket/8dc7aacf-9ddc-42ff-ae7d-7c756f17e529.jpg";
 
 // Палитра: белый фон, пыльно-лиловые акценты, тёмно-серый текст
 // --text-dark:   #3a3040   (заголовки)
@@ -41,17 +42,20 @@ export default function Index() {
   return (
     <div className="min-h-screen font-sans text-[#3a3040] relative">
 
-      {/* Единый фон на весь сайт */}
+      {/* Фон для всего сайта — шёлковые волны */}
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${SUNSET_BG})` }}
+        style={{ backgroundImage: `url(${SILK_BG})` }}
       />
-      {/* Белый оверлей поверх — делает фон нежным, не кислотным */}
-      <div className="fixed inset-0 bg-white/75" />
 
       {/* ─── HERO ─── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/40" />
+        {/* Цветы только в герое */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${SUNSET_BG})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-white/60" />
 
         <div className="relative z-10 text-center px-6 opacity-0 animate-fade-in" style={{ animationFillMode: 'forwards' }}>
           <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#a89eb8] mb-8">
